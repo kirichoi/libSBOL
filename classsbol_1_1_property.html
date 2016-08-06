@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="getting_started.html"><span>Getting&#160;Started</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -98,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>metafunction for generation of a map of message types to their associated callbacks.  
+<p>These classes are for user defined extensions, the casual user need not worry about them.  
  <a href="classsbol_1_1_property.html#details">More...</a></p>
 
 <p><code>#include &lt;property.h&gt;</code></p>
@@ -107,11 +108,11 @@ Collaboration diagram for sbol::Property&lt; LiteralType &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsbol_1_1_property__coll__graph.png" border="0" usemap="#sbol_1_1_property_3_01_literal_type_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="sbol_1_1_property_3_01_literal_type_01_4_coll__map" id="sbol_1_1_property_3_01_literal_type_01_4_coll__map">
-<area shape="rect" id="node2" href="classsbol_1_1_s_b_o_l_object.html" title="{sbol::SBOLObject\n|+ properties\l+ list_properties\l+ owned_objects\l+ type\l|+ SBOLObject()\l+ SBOLObject()\l+ ~SBOLObject()\l+ getTypeURI()\l+ serialize()\l+ nest()\l+ getClassName()\l# SBOLObject()\l# SBOLObject()\l}" alt="" coords="19,327,149,547"/>
-<area shape="rect" id="node4" href="classsbol_1_1_property.html" title="{sbol::Property\&lt; std\l::string \&gt;\n|# type\l# validationRules\l|+ Property()\l+ Property()\l+ Property()\l+ ~Property()\l+ getTypeURI()\l+ getOwner()\l+ get()\l+ add()\l+ set()\l+ set()\land 6 more...\l}" alt="" coords="118,608,250,841"/>
-<area shape="rect" id="node3" href="classsbol_1_1_u_r_i_property.html" title="{sbol::URIProperty\n||+ URIProperty()\l}" alt="" coords="21,891,147,964"/>
-<area shape="rect" id="node5" href="classsbol_1_1_property_1_1iterator.html" title="{sbol::Property\&lt; LiteralType\l \&gt;::iterator\n||+ iterator()\l}" alt="" coords="266,393,446,480"/>
-<area shape="rect" id="node7" href="classsbol_1_1_document.html" title="Read and write SBOL using a Document class. The Document is a container for Components, Modules, and all other SBOLObjects. " alt="" coords="5,5,163,265"/>
+<area shape="rect" id="node2" href="classsbol_1_1_s_b_o_l_object.html" title="{sbol::SBOLObject\n|+ properties\l+ list_properties\l+ owned_objects\l+ type\l|+ SBOLObject()\l+ SBOLObject()\l+ ~SBOLObject()\l+ getTypeURI()\l+ serialize()\l+ nest()\l+ getClassName()\l# SBOLObject()\l# SBOLObject()\l}" alt="" coords="19,351,145,589"/>
+<area shape="rect" id="node4" href="classsbol_1_1_property.html" title="{sbol::Property\&lt; std\l::string \&gt;\n|# type\l# validationRules\l|+ Property()\l+ Property()\l+ Property()\l+ ~Property()\l+ getTypeURI()\l+ getOwner()\l+ get()\l+ add()\l+ set()\l+ set()\land 6 more...\l}" alt="" coords="115,652,249,905"/>
+<area shape="rect" id="node3" href="classsbol_1_1_u_r_i_property.html" title="{sbol::URIProperty\n||+ URIProperty()\l}" alt="" coords="21,955,143,1032"/>
+<area shape="rect" id="node5" href="classsbol_1_1_property_1_1iterator.html" title="{sbol::Property\&lt; LiteralType\l \&gt;::iterator\n||+ iterator()\l}" alt="" coords="267,424,446,516"/>
+<area shape="rect" id="node7" href="classsbol_1_1_document.html" title="Read and write SBOL using a Document class. The Document is a container for Components, Modules, and all other SBOLObjects. " alt="" coords="5,5,159,288"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -190,20 +191,17 @@ ValidationRules&#160;</td><td class="memItemRight" valign="bottom"><b>validation
 <div class="textblock"><h3>template&lt;class LiteralType&gt;<br />
 class sbol::Property&lt; LiteralType &gt;</h3>
 
-<p>metafunction for generation of a map of message types to their associated callbacks. </p>
-<p>Usage: Use <code>generate_callback_map&lt;Type&gt;::type</code> to ... </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+<p>These classes are for user defined extensions, the casual user need not worry about them. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">LiteralType</td><td>The library currently supports Property&lt;string&gt; and <a class="el" href="classsbol_1_1_property.html">Property&lt;int&gt;</a> specification currently supports integer, string, and URI literals </td></tr>
+    <tr><td class="paramname">LiteralType</td><td>The SBOL specification currently supports supports integer, string, and URI literals </td></tr>
   </table>
   </dd>
 </dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/bryan/Dev/libSBOL/source/property.h</li>
-</ul>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 28 2016 15:25:14 for libSBOL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 5 2016 18:13:49 for libSBOL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

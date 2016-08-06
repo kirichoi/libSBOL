@@ -1,3 +1,4 @@
 <map id="sbol::TextProperty" name="sbol::TextProperty">
-<area shape="rect" id="node2" href="$classsbol_1_1_property.html" title="{sbol::Property\&lt; std\l::string \&gt;\n|+ python_iter\l# type\l# sbol_owner\l# validationRules\l|+ Property()\l+ Property()\l+ Property()\l+ ~Property()\l+ getTypeURI()\l+ getOwner()\l+ get()\l+ add()\l+ set()\l+ set()\land 6 more...\l}" alt="" coords="5,5,138,265"/>
+<area shape="rect" id="node3" href="$classsbol_1_1_version_property.html" title="{sbol::VersionProperty\n||+ incrementMinor()\l+ incrementMajor()\l+ incrementPatch()\l+ decrementMinor()\l+ decrementMajor()\l+ decrementPatch()\l+ major()\l+ minor()\l+ patch()\l+ VersionProperty()\l}" alt="" coords="5,461,152,671"/>
+<area shape="rect" id="node2" href="$classsbol_1_1_property.html" title="{sbol::Property\&lt; std\l::string \&gt;\n|+ python_iter\l# type\l# sbol_owner\l# validationRules\l|+ Property()\l+ Property()\l+ Property()\l+ ~Property()\l+ getTypeURI()\l+ getOwner()\l+ get()\l+ add()\l+ set()\l+ set()\land 6 more...\l}" alt="" coords="12,5,145,288"/>
 </map>

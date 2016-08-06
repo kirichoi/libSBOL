@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="getting_started.html"><span>Getting&#160;Started</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -99,7 +100,8 @@ Inheritance diagram for sbol::TextProperty:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsbol_1_1_text_property__inherit__graph.png" border="0" usemap="#sbol_1_1_text_property_inherit__map" alt="Inheritance graph"/></div>
 <map name="sbol_1_1_text_property_inherit__map" id="sbol_1_1_text_property_inherit__map">
-<area shape="rect" id="node2" href="classsbol_1_1_property.html" title="{sbol::Property\&lt; std\l::string \&gt;\n|+ python_iter\l# type\l# sbol_owner\l# validationRules\l|+ Property()\l+ Property()\l+ Property()\l+ ~Property()\l+ getTypeURI()\l+ getOwner()\l+ get()\l+ add()\l+ set()\l+ set()\land 6 more...\l}" alt="" coords="5,5,138,265"/>
+<area shape="rect" id="node3" href="classsbol_1_1_version_property.html" title="{sbol::VersionProperty\n||+ incrementMinor()\l+ incrementMajor()\l+ incrementPatch()\l+ decrementMinor()\l+ decrementMajor()\l+ decrementPatch()\l+ major()\l+ minor()\l+ patch()\l+ VersionProperty()\l}" alt="" coords="5,461,152,671"/>
+<area shape="rect" id="node2" href="classsbol_1_1_property.html" title="{sbol::Property\&lt; std\l::string \&gt;\n|+ python_iter\l# type\l# sbol_owner\l# validationRules\l|+ Property()\l+ Property()\l+ Property()\l+ ~Property()\l+ getTypeURI()\l+ getOwner()\l+ get()\l+ add()\l+ set()\l+ set()\land 6 more...\l}" alt="" coords="12,5,145,288"/>
 </map>
 </div>
 <div class="dynheader">
@@ -107,11 +109,11 @@ Collaboration diagram for sbol::TextProperty:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsbol_1_1_text_property__coll__graph.png" border="0" usemap="#sbol_1_1_text_property_coll__map" alt="Collaboration graph"/></div>
 <map name="sbol_1_1_text_property_coll__map" id="sbol_1_1_text_property_coll__map">
-<area shape="rect" id="node2" href="classsbol_1_1_property.html" title="{sbol::Property\&lt; std\l::string \&gt;\n|# type\l# validationRules\l|+ Property()\l+ Property()\l+ Property()\l+ ~Property()\l+ getTypeURI()\l+ getOwner()\l+ get()\l+ add()\l+ set()\l+ set()\land 6 more...\l}" alt="" coords="335,289,468,523"/>
-<area shape="rect" id="node4" href="classsbol_1_1_u_r_i_property.html" title="{sbol::URIProperty\n||+ URIProperty()\l}" alt="" coords="338,665,465,739"/>
-<area shape="rect" id="node3" href="classsbol_1_1_s_b_o_l_object.html" title="{sbol::SBOLObject\n|+ properties\l+ list_properties\l+ owned_objects\l+ type\l|+ SBOLObject()\l+ SBOLObject()\l+ ~SBOLObject()\l+ getTypeURI()\l+ serialize()\l+ nest()\l+ getClassName()\l# SBOLObject()\l# SBOLObject()\l}" alt="" coords="337,893,466,1113"/>
-<area shape="rect" id="node5" href="classsbol_1_1_document.html" title="Read and write SBOL using a Document class. The Document is a container for Components, Modules, and all other SBOLObjects. " alt="" coords="5,572,163,832"/>
-<area shape="rect" id="node6" href="classsbol_1_1_property_1_1iterator.html" title="{sbol::Property\&lt; LiteralType\l \&gt;::iterator\n||+ iterator()\l}" alt="" coords="311,141,491,228"/>
+<area shape="rect" id="node2" href="classsbol_1_1_property.html" title="{sbol::Property\&lt; std\l::string \&gt;\n|# type\l# validationRules\l|+ Property()\l+ Property()\l+ Property()\l+ ~Property()\l+ getTypeURI()\l+ getOwner()\l+ get()\l+ add()\l+ set()\l+ set()\land 6 more...\l}" alt="" coords="330,301,463,555"/>
+<area shape="rect" id="node4" href="classsbol_1_1_u_r_i_property.html" title="{sbol::URIProperty\n||+ URIProperty()\l}" alt="" coords="335,707,458,784"/>
+<area shape="rect" id="node3" href="classsbol_1_1_s_b_o_l_object.html" title="{sbol::SBOLObject\n|+ properties\l+ list_properties\l+ owned_objects\l+ type\l|+ SBOLObject()\l+ SBOLObject()\l+ ~SBOLObject()\l+ getTypeURI()\l+ serialize()\l+ nest()\l+ getClassName()\l# SBOLObject()\l# SBOLObject()\l}" alt="" coords="334,949,459,1188"/>
+<area shape="rect" id="node5" href="classsbol_1_1_document.html" title="Read and write SBOL using a Document class. The Document is a container for Components, Modules, and all other SBOLObjects. " alt="" coords="5,604,159,887"/>
+<area shape="rect" id="node6" href="classsbol_1_1_property_1_1iterator.html" title="{sbol::Property\&lt; LiteralType\l \&gt;::iterator\n||+ iterator()\l}" alt="" coords="307,147,486,239"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -184,13 +186,10 @@ sbol_type&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></t
 ValidationRules&#160;</td><td class="memItemRight" valign="bottom"><b>validationRules</b></td></tr>
 <tr class="separator:ac59ab204841ef6d58b4ea0ce9129a93a inherit pro_attribs_classsbol_1_1_property"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/bryan/Dev/libSBOL/source/properties.h</li>
-</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 28 2016 15:25:14 for libSBOL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 5 2016 18:13:50 for libSBOL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

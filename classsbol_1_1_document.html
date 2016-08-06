@@ -42,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="getting_started.html"><span>Getting&#160;Started</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -140,15 +141,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a0d77d27a857cf315c7b0923d0e106c5e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d77d27a857cf315c7b0923d0e106c5e"></a>
 std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getNamespaces</b> ()</td></tr>
 <tr class="separator:a0d77d27a857cf315c7b0923d0e106c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab31fa070d3cfd8e6a5c3acdfe0e81731"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab31fa070d3cfd8e6a5c3acdfe0e81731"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addNamespace</b> (std::string ns, std::string prefix, raptor_serializer *sbol_serializer)</td></tr>
+<tr class="separator:ab31fa070d3cfd8e6a5c3acdfe0e81731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe9dacf188670b4f43757eae73ad70e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe9dacf188670b4f43757eae73ad70e1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addNamespace</b> (std::string ns, std::string prefix)</td></tr>
+<tr class="separator:abe9dacf188670b4f43757eae73ad70e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea194694a3e3168199dc2765a38e7721"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea194694a3e3168199dc2765a38e7721"></a>
 std::vector&lt; <a class="el" href="classsbol_1_1_s_b_o_l_object.html">SBOLObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>flatten</b> ()</td></tr>
 <tr class="separator:aea194694a3e3168199dc2765a38e7721"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c6154e0902d5779c444f092549ce867"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c6154e0902d5779c444f092549ce867"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addNameSpace</b> (std::string ns, std::string prefix, raptor_serializer *sbol_serializer)</td></tr>
-<tr class="separator:a0c6154e0902d5779c444f092549ce867"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1907a43de90786785b03e04f2abf4dc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1907a43de90786785b03e04f2abf4dc8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addNameSpace</b> (std::string ns, std::string prefix)</td></tr>
-<tr class="separator:a1907a43de90786785b03e04f2abf4dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -164,10 +165,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>namespaceHandl
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a55ad92c4490ba1985f01617911a016e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55ad92c4490ba1985f01617911a016e1"></a>
-std::unordered_map&lt; std::string, <a class="el" href="classsbol_1_1_top_level.html">sbol::TopLevel</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsbol_1_1_document.html#a55ad92c4490ba1985f01617911a016e1">SBOLObjects</a></td></tr>
-<tr class="memdesc:a55ad92c4490ba1985f01617911a016e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classsbol_1_1_document.html" title="Read and write SBOL using a Document class. The Document is a container for Components, Modules, and all other SBOLObjects. ">Document</a>'s register of objects. <br /></td></tr>
-<tr class="separator:a55ad92c4490ba1985f01617911a016e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b9787e28961c4fc22c8c56a7735b72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3b9787e28961c4fc22c8c56a7735b72"></a>
+std::unordered_map&lt; std::string, <a class="el" href="classsbol_1_1_s_b_o_l_object.html">sbol::SBOLObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsbol_1_1_document.html#ae3b9787e28961c4fc22c8c56a7735b72">SBOLObjects</a></td></tr>
+<tr class="memdesc:ae3b9787e28961c4fc22c8c56a7735b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classsbol_1_1_document.html" title="Read and write SBOL using a Document class. The Document is a container for Components, Modules, and all other SBOLObjects. ">Document</a>'s register of objects. <br /></td></tr>
+<tr class="separator:ae3b9787e28961c4fc22c8c56a7735b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Read and write SBOL using a <a class="el" href="classsbol_1_1_document.html" title="Read and write SBOL using a Document class. The Document is a container for Components, Modules, and all other SBOLObjects. ">Document</a> class. The <a class="el" href="classsbol_1_1_document.html" title="Read and write SBOL using a Document class. The Document is a container for Components, Modules, and all other SBOLObjects. ">Document</a> is a container for Components, Modules, and all other SBOLObjects. </p>
@@ -202,6 +203,16 @@ template&lt;class SBOLClass &gt; </div>
   </dd>
 </dl>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsbol_1_1_document_a7a76565b2eec04fceaa218fcf01f8d3e_icgraph.png" border="0" usemap="#classsbol_1_1_document_a7a76565b2eec04fceaa218fcf01f8d3e_icgraph" alt=""/></div>
+<map name="classsbol_1_1_document_a7a76565b2eec04fceaa218fcf01f8d3e_icgraph" id="classsbol_1_1_document_a7a76565b2eec04fceaa218fcf01f8d3e_icgraph">
+<area shape="rect" id="node2" href="classsbol_1_1_document.html#af63b9f8ccfc1ab4e54d886e5f5425b57" title="Retrieve an object from the Document. " alt="" coords="196,5,336,32"/>
+</map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="af63b9f8ccfc1ab4e54d886e5f5425b57"></a>
@@ -233,6 +244,16 @@ template&lt;class SBOLClass &gt; </div>
   </table>
   </dd>
 </dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsbol_1_1_document_af63b9f8ccfc1ab4e54d886e5f5425b57_cgraph.png" border="0" usemap="#classsbol_1_1_document_af63b9f8ccfc1ab4e54d886e5f5425b57_cgraph" alt=""/></div>
+<map name="classsbol_1_1_document_af63b9f8ccfc1ab4e54d886e5f5425b57_cgraph" id="classsbol_1_1_document_af63b9f8ccfc1ab4e54d886e5f5425b57_cgraph">
+<area shape="rect" id="node2" href="classsbol_1_1_document.html#a7a76565b2eec04fceaa218fcf01f8d3e" title="Register an object in the Document. " alt="" coords="193,5,336,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -284,13 +305,10 @@ template&lt;class SBOLClass &gt; </div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/bryan/Dev/libSBOL/source/document.h</li>
-</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 28 2016 15:25:14 for libSBOL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 5 2016 18:13:48 for libSBOL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
