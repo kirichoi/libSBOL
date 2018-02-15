@@ -54,6 +54,9 @@ namespace sbol
     /// A class which contains global configuration variables for the libSBOL environment. Intended to be used like a static class, configuration variables are accessed through the Config::setOptions and Config::getOptions methods.
     class SBOL_DECLSPEC Config
     {
+    friend class Document;      // needs to access PYTHON_DATA_MODEL_REGISTER
+    friend class SBOLObject;    // needs to access PYTHON_DATA_MODEL_REGISTER
+    
     private:
         static std::map<std::string, std::string> options;
         static std::map<std::string, std::vector<std::string>> valid_options;
@@ -61,11 +64,11 @@ namespace sbol
         int SBOLCompliantTypes; ///< Flag indicating whether an object's type is included in SBOL-compliant URIs
         int catch_exceptions = 0;
         std::string format = "rdfxml";
-//#if defined(SBOL_BUILD_PYTHON2) || defined(SBOL_BUILD_PYTHON3)
-//        // This is the global SBOL register for Python extension classes.  It maps an SBOL RDF type (eg, "http://sbolstandard.org/v2#Sequence" to a Python constructor
-////        static PyObject* PYTHON_DATA_MODEL_REGISTER = PyDict_New();
-//        std::map<std::string, PythonObject*> PYTHON_DATA_MODEL_REGISTER;
-//#endif
+#if defined(SBOL_BUILD_PYTHON2) || defined(SBOL_BUILD_PYTHON3)
+        // This is the global SBOL register for Python extension classes.  It maps an SBOL RDF type (eg, "http://sbolstandard.org/v2#Sequence" to a Python constructor
+//        static PyObject* PYTHON_DATA_MODEL_REGISTER = PyDict_New();
+        static std::map<std::string, PyObject*> PYTHON_DATA_MODEL_REGISTER;
+#endif
         
     public:
         Config() :
@@ -76,10 +79,6 @@ namespace sbol
         void setHomespace(std::string ns);  
         std::string getHomespace();
         int hasHomespace();
-        void toggleSBOLCompliantTypes(bool is_toggled = false);
-        int compliantTypesEnabled();
-        void toggleExceptions(bool is_toggled = false);
-        int exceptionsEnabled();
         void setFileFormat(std::string file_format);
         std::string getFileFormat();
         /// @endcond
@@ -107,24 +106,21 @@ namespace sbol
         /// @param value The option value
         static void setOption(std::string option, std::string value);
         
+        static void setOption(std::string option, char const* value);
+        
         static void setOption(std::string option, bool value);
 
         /// Get current option value for online validation and conversion
         /// @param option The option key
         static std::string getOption(std::string option);
-        
     };
     
     /// Global methods
 	SBOL_DECLSPEC void setHomespace(std::string ns); ///< Set the default namespace for autocreation of URIs when a new SBOL object is created
 	SBOL_DECLSPEC extern std::string getHomespace(); ///< Get the current default namespace for autocreation of URIs when a new SBOL object is created
 	SBOL_DECLSPEC int hasHomespace();                ///< Checks if a valid default namespace has been defined
-	SBOL_DECLSPEC void toggleSBOLCompliantTypes(bool is_toggled = false);   ///< Allows SBOL-compliant URIs. Accepts boolean. The default value is false
-	SBOL_DECLSPEC int compliantTypesEnabled();       ///< Checks if an object's type is included in SBOL-compliant URIs
 	SBOL_DECLSPEC void setFileFormat(std::string file_format);    ///< Sets file format to use
     std::string SBOL_DECLSPEC getFileFormat();       ///< Returns currently accepted file format
-	SBOL_DECLSPEC void toggleExceptions(bool is_toggled = false);    ///< Function to toggle exception handling. Accepts boolean. The default value is false
-	SBOL_DECLSPEC int exceptionsEnabled();           ///< Checks if exception is enabled
     
     /// <!--------- Utility methods for parsing URIs ------\>
     /// @cond
@@ -137,9 +133,11 @@ namespace sbol
     std::string SBOL_DECLSPEC parseClassName(std::string uri);
     std::string SBOL_DECLSPEC parsePropertyName(std::string uri);
     std::string SBOL_DECLSPEC parseNamespace(std::string uri);
+    std::string SBOL_DECLSPEC parseURLDomain(std::string url);
+
 
     size_t CurlWrite_CallbackFunc_StdString(void *contents, size_t size, size_t nmemb, std::string *s);
-
+    size_t CurlResponseHeader_CallbackFunc(char *buffer,   size_t size,   size_t nitems,   void *userdata);
     /// @endcond
     
 }

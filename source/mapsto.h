@@ -42,7 +42,7 @@ namespace sbol
         /// | http://sbols.org/v2#useRemote        | SBOL_REFINEMENT_USE_REMOTE        | All references to the local ComponentInstance MUST dereference to the<br>remote ComponentInstance instead. |
         /// | http://sbols.org/v2#useLocal         | SBOL_REFINEMENT_USE_LOCAL         | In the context of the ComponentDefinition or ModuleDefinition that contains<br>the owner of the MapsTo, all references to the remote ComponentInstance<br>MUST dereference to the local ComponentInstance instead. |
         /// | http://sbols.org/v2#verifyIdentical  | SBOL_REFINEMENT_VERIFY_IDENTICAL  | The definition properties of the local and remoteComponentInstance objects<br>MUST refer to the same ComponentDefinition. |
-        /// | http://sbols.org/v2#mergeDescription | SBOL_REFINEMENT_MERGE_DESCRIPTION | In the context of the ComponentDefinition or ModuleDefinition that<br>contains the owner of the MapsTo, all references to the local<br>ComponentInstance or the remote ComponentInstance MUST dereference<br>to both objects.
+        /// | http://sbols.org/v2#merge | SBOL_REFINEMENT_MERGE_DESCRIPTION | In the context of the ComponentDefinition or ModuleDefinition that<br>contains the owner of the MapsTo, all references to the local<br>ComponentInstance or the remote ComponentInstance MUST dereference<br>to both objects.
         URIProperty refinement;
         
         /// The identity of the lower level ComponentInstance
@@ -56,16 +56,16 @@ namespace sbol
         /// @param local The identity of the lower level ComponentInstance
         /// @param remote The identity of the higher level ComponentInstance
         /// @param restriction Flag indicating the relationship between high- and low-level ComponentInstances. By default, this is set to SBOL_REFINEMENT_VERIFY_IDENTICAL
-        MapsTo(std::string uri = DEFAULT_NS "/MapsTo/example", std::string local = "", std::string remote = "", std::string refinement = SBOL_REFINEMENT_VERIFY_IDENTICAL) : MapsTo(SBOL_MAPS_TO, uri, local, remote, refinement) {};
+        MapsTo(std::string uri = "example", std::string local = "", std::string remote = "", std::string refinement = SBOL_REFINEMENT_VERIFY_IDENTICAL) : MapsTo(SBOL_MAPS_TO, uri, local, remote, refinement) {};
         
         
         virtual ~MapsTo() {};
 	protected:
-        MapsTo(sbol_type type, std::string uri, std::string local, std::string remote, std::string refinement) :
+        MapsTo(rdf_type type, std::string uri, std::string local, std::string remote, std::string refinement) :
             Identified(type, uri),
-            refinement(SBOL_REFINEMENT, this, refinement),
-            local(SBOL_LOCAL, SBOL_COMPONENT, this, local),
-            remote(SBOL_REMOTE,  SBOL_COMPONENT, this, remote)
+            local(this, SBOL_LOCAL, SBOL_COMPONENT, '1', '1', ValidationRules({}), local),
+            remote(this, SBOL_REMOTE, SBOL_COMPONENT, '1', '1', ValidationRules({}), remote),
+            refinement(this, SBOL_REFINEMENT, '1', '1', ValidationRules({}) , refinement)
             {
             }
 
